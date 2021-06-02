@@ -9,6 +9,24 @@ Python Code:
 
 Install flask
 Install slackeventsapi
+
+Json Conversion:
+Approach 1:
+$ pip install excel2json-3
+
+Code:
+
+#import excel2json
+#excel2json.convert_from_file('records.xlsx')
+
+Approach 2:
+
+import pandas
+excel_data_df = pandas.read_excel('records.xlsx', sheet_name='Employees')
+json_str = excel_data_df.to_json()
+print('Excel Sheet to JSON:\n', json_str)
+
+
  
 Pytton Code Changes:
 
